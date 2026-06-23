@@ -1,0 +1,45 @@
+.section {
+  padding-top: 0.25rem;
+}
+
+.card {
+  padding: var(--space-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-panel);
+  background: var(--story-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--eyebrow);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--text);
+  font-size: var(--text-section);
+  line-height: 1;
+}
+
+.story {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.story p {
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  .card {
+    padding: 2rem;
+  }
+}

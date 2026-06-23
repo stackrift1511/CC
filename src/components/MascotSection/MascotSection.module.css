@@ -1,0 +1,94 @@
+.section {
+  padding-top: 0.25rem;
+}
+
+.card {
+  padding: var(--space-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-panel);
+  background: var(--story-surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.header {
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--eyebrow);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--text);
+  font-size: var(--text-section);
+  line-height: 1;
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+}
+
+.mascotWrap {
+  min-height: 16rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background:
+    radial-gradient(circle at 50% 20%, var(--hero-glow-secondary), transparent 42%),
+    var(--section-surface);
+  overflow: hidden;
+}
+
+.mascot {
+  width: min(78%, 18rem);
+  height: auto;
+  filter: drop-shadow(0 20px 26px rgba(0, 0, 0, 0.24));
+}
+
+.block,
+.quoteCard {
+  padding: 1.25rem;
+  border-radius: 1.5rem;
+}
+
+.block {
+  border: 1px solid var(--border);
+  background: var(--section-surface);
+}
+
+.quoteCard {
+  border: 1px solid var(--border);
+  background: var(--quote-surface);
+}
+
+.block p,
+.quoteCard p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.block p + p,
+.quoteCard p + p {
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 64rem) {
+  .content {
+    grid-template-columns: 0.8fr 1.1fr 0.8fr;
+  }
+}
+
+@media (min-width: 48rem) {
+  .card {
+    padding: 2rem;
+  }
+}

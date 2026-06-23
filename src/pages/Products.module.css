@@ -1,0 +1,33 @@
+.page {
+  display: grid;
+  gap: var(--space-page-mobile);
+}
+
+.gridSection {
+  padding-top: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .page {
+    gap: var(--space-page-tablet);
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 75rem) {
+  .page {
+    gap: var(--space-page-desktop);
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

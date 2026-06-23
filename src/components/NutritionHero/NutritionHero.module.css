@@ -1,0 +1,51 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-panel);
+  background:
+    radial-gradient(circle at top right, var(--hero-glow-secondary), transparent 26%),
+    linear-gradient(180deg, var(--section-surface-strong), var(--section-surface));
+  box-shadow: var(--shadow-soft);
+}
+
+.heroIcon {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: clamp(4.5rem, 18vw, 8rem);
+  height: auto;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--eyebrow);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--text);
+  font-size: var(--text-hero);
+  line-height: 0.95;
+}
+
+.subtitle {
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  color: var(--text-muted);
+  font-size: var(--text-subtitle);
+  line-height: 1.7;
+}
+
+@media (min-width: 48rem) {
+  .hero {
+    padding: 2.5rem 2rem;
+  }
+}

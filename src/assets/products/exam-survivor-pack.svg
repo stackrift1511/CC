@@ -1,0 +1,15 @@
+<svg width="360" height="460" viewBox="0 0 360 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="78" y="28" width="204" height="404" rx="28" fill="#5C3BA5"/>
+  <path d="M78 61C131 36 206 56 282 32V152C219 143 145 141 78 166V61Z" fill="#FF7A1A"/>
+  <path d="M78 318C130 292 210 307 282 278V404C224 436 137 425 78 392V318Z" fill="#2A174F"/>
+  <rect x="101" y="86" width="158" height="246" rx="18" fill="#0E1026" fill-opacity=".9"/>
+  <text x="180" y="144" text-anchor="middle" fill="#FF7A1A" font-family="Trebuchet MS, Arial, sans-serif" font-size="29" font-weight="900">CRUNCH</text>
+  <text x="180" y="181" text-anchor="middle" fill="#F4C64F" font-family="Trebuchet MS, Arial, sans-serif" font-size="32" font-weight="900">CHAOS</text>
+  <text x="180" y="229" text-anchor="middle" fill="#F8F2FF" font-family="Trebuchet MS, Arial, sans-serif" font-size="24" font-weight="800">EXAM</text>
+  <text x="180" y="263" text-anchor="middle" fill="#F8F2FF" font-family="Trebuchet MS, Arial, sans-serif" font-size="24" font-weight="800">SURVIVOR</text>
+  <text x="180" y="297" text-anchor="middle" fill="#F8F2FF" font-family="Trebuchet MS, Arial, sans-serif" font-size="24" font-weight="800">PACK</text>
+  <path d="M118 367L136 340L154 367H140V384H132V367H118Z" fill="#F4C64F"/>
+  <path d="M235 341L221 368H239L226 393" stroke="#F4C64F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M123 50H237" stroke="#F8F2FF" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/>
+  <path d="M123 411H237" stroke="#F8F2FF" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/>
+</svg>

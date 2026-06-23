@@ -1,0 +1,15 @@
+<svg width="360" height="460" viewBox="0 0 360 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="78" y="28" width="204" height="404" rx="28" fill="#FF7A1A"/>
+  <path d="M78 70C124 42 198 51 282 32V118C215 139 140 129 78 154V70Z" fill="#F9C642"/>
+  <path d="M78 319C125 296 205 305 282 279V404C225 435 135 424 78 396V319Z" fill="#D72F20"/>
+  <rect x="101" y="86" width="158" height="240" rx="18" fill="#101B2E" fill-opacity=".88"/>
+  <text x="180" y="144" text-anchor="middle" fill="#FF7A1A" font-family="Trebuchet MS, Arial, sans-serif" font-size="29" font-weight="900">CRUNCH</text>
+  <text x="180" y="181" text-anchor="middle" fill="#F9C642" font-family="Trebuchet MS, Arial, sans-serif" font-size="32" font-weight="900">CHAOS</text>
+  <text x="180" y="232" text-anchor="middle" fill="#FFF6DE" font-family="Trebuchet MS, Arial, sans-serif" font-size="25" font-weight="800">SPICY</text>
+  <text x="180" y="266" text-anchor="middle" fill="#FFF6DE" font-family="Trebuchet MS, Arial, sans-serif" font-size="25" font-weight="800">MANGO</text>
+  <text x="180" y="299" text-anchor="middle" fill="#FFF6DE" font-family="Trebuchet MS, Arial, sans-serif" font-size="25" font-weight="800">CHAAT</text>
+  <circle cx="115" cy="356" r="15" fill="#F9C642"/>
+  <path d="M233 352L261 370L229 386Z" fill="#F9C642"/>
+  <path d="M123 50H237" stroke="#FFF6DE" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/>
+  <path d="M123 411H237" stroke="#FFF6DE" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/>
+</svg>

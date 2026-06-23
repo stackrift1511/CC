@@ -1,0 +1,16 @@
+<svg width="360" height="460" viewBox="0 0 360 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="78" y="28" width="204" height="404" rx="28" fill="#2F7A4B"/>
+  <path d="M78 64C130 49 205 56 282 32V154C208 135 139 146 78 126V64Z" fill="#FF7A1A"/>
+  <path d="M78 328C132 296 207 312 282 286V404C221 430 143 424 78 390V328Z" fill="#173526"/>
+  <rect x="101" y="86" width="158" height="246" rx="18" fill="#0E1C18" fill-opacity=".9"/>
+  <text x="180" y="144" text-anchor="middle" fill="#FF7A1A" font-family="Trebuchet MS, Arial, sans-serif" font-size="29" font-weight="900">CRUNCH</text>
+  <text x="180" y="181" text-anchor="middle" fill="#F4C64F" font-family="Trebuchet MS, Arial, sans-serif" font-size="32" font-weight="900">CHAOS</text>
+  <text x="180" y="232" text-anchor="middle" fill="#F3FFE9" font-family="Trebuchet MS, Arial, sans-serif" font-size="24" font-weight="800">SMOKY</text>
+  <text x="180" y="266" text-anchor="middle" fill="#F3FFE9" font-family="Trebuchet MS, Arial, sans-serif" font-size="24" font-weight="800">TANDOORI</text>
+  <text x="180" y="299" text-anchor="middle" fill="#F3FFE9" font-family="Trebuchet MS, Arial, sans-serif" font-size="24" font-weight="800">LIME</text>
+  <circle cx="125" cy="360" r="17" fill="#B8E05C"/>
+  <path d="M125 343C134 355 134 365 125 377C116 365 116 355 125 343Z" fill="#2F7A4B"/>
+  <path d="M226 355C241 344 256 345 267 356C252 367 237 366 226 355Z" fill="#B8E05C"/>
+  <path d="M123 50H237" stroke="#F3FFE9" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/>
+  <path d="M123 411H237" stroke="#F3FFE9" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/>
+</svg>

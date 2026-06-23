@@ -1,0 +1,16 @@
+.page {
+  display: grid;
+  gap: var(--space-page-mobile);
+}
+
+@media (min-width: 48rem) {
+  .page {
+    gap: var(--space-page-tablet);
+  }
+}
+
+@media (min-width: 64rem) {
+  .page {
+    gap: var(--space-page-desktop);
+  }
+}

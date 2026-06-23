@@ -1,0 +1,16 @@
+<svg width="360" height="460" viewBox="0 0 360 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="78" y="28" width="204" height="404" rx="28" fill="#F4C64F"/>
+  <path d="M78 58C142 33 213 63 282 35V142C227 157 142 136 78 165V58Z" fill="#FFF2C8"/>
+  <path d="M78 319C139 293 215 310 282 282V404C220 435 139 424 78 392V319Z" fill="#FF7A1A"/>
+  <rect x="101" y="86" width="158" height="246" rx="18" fill="#182338" fill-opacity=".88"/>
+  <text x="180" y="144" text-anchor="middle" fill="#FF7A1A" font-family="Trebuchet MS, Arial, sans-serif" font-size="29" font-weight="900">CRUNCH</text>
+  <text x="180" y="181" text-anchor="middle" fill="#F4C64F" font-family="Trebuchet MS, Arial, sans-serif" font-size="32" font-weight="900">CHAOS</text>
+  <text x="180" y="232" text-anchor="middle" fill="#FFF6DE" font-family="Trebuchet MS, Arial, sans-serif" font-size="25" font-weight="800">CHEESE</text>
+  <text x="180" y="266" text-anchor="middle" fill="#FFF6DE" font-family="Trebuchet MS, Arial, sans-serif" font-size="25" font-weight="800">BOMB</text>
+  <text x="180" y="299" text-anchor="middle" fill="#FFF6DE" font-family="Trebuchet MS, Arial, sans-serif" font-size="25" font-weight="800">MASALA</text>
+  <rect x="113" y="348" width="34" height="28" rx="6" fill="#FFF2C8"/>
+  <circle cx="127" cy="362" r="4" fill="#F4C64F"/>
+  <rect x="221" y="350" width="32" height="32" rx="8" fill="#FFF2C8" transform="rotate(12 221 350)"/>
+  <path d="M123 50H237" stroke="#182338" stroke-opacity=".32" stroke-width="4" stroke-linecap="round"/>
+  <path d="M123 411H237" stroke="#182338" stroke-opacity=".32" stroke-width="4" stroke-linecap="round"/>
+</svg>

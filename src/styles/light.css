@@ -1,0 +1,75 @@
+[data-theme="light"] {
+  --background: #f6eddc;
+  --surface: #f1e4cd;
+  --card: #fff7e9;
+  --text: #11213d;
+  --text-muted: rgba(17, 33, 61, 0.7);
+  --primary: #ef7d1a;
+  --primary-hover: #d86d12;
+  --secondary: #f3c766;
+  --secondary-hover: #e8b84c;
+  --accent: #7b9364;
+  --border: rgba(17, 33, 61, 0.12);
+  --border-strong: rgba(17, 33, 61, 0.2);
+  --shadow-soft: 0 16px 38px rgba(77, 52, 25, 0.12);
+  --shadow-strong: 0 24px 56px rgba(77, 52, 25, 0.18);
+  --button-primary-background: var(--primary);
+  --button-primary-text: #fff8ef;
+  --button-primary-hover: var(--primary-hover);
+  --button-secondary-background: rgba(255, 255, 255, 0.45);
+  --button-secondary-hover: rgba(255, 255, 255, 0.72);
+  --focus-ring: rgba(239, 125, 26, 0.3);
+  --selection-background: rgba(243, 199, 102, 0.42);
+  --selection-text: var(--text);
+  --nav-background: rgba(246, 237, 220, 0.78);
+  --nav-link-hover: rgba(17, 33, 61, 0.06);
+  --nav-link-active: rgba(239, 125, 26, 0.16);
+  --footer-background: rgba(255, 255, 255, 0.38);
+  --overlay: rgba(17, 33, 61, 0.24);
+  --hero-glow-primary: rgba(239, 125, 26, 0.22);
+  --hero-glow-secondary: rgba(243, 199, 102, 0.24);
+  --hero-grid: rgba(17, 33, 61, 0.05);
+  --section-surface: rgba(255, 255, 255, 0.38);
+  --section-surface-strong: rgba(255, 255, 255, 0.55);
+  --product-surface: linear-gradient(
+    180deg,
+    var(--section-surface-strong),
+    var(--section-surface)
+  );
+  --product-surface-hover: rgba(255, 255, 255, 0.68);
+  --rating-active: var(--primary);
+  --rating-inactive: rgba(17, 33, 61, 0.14);
+  --eyebrow: var(--primary);
+  --info-surface: linear-gradient(
+    180deg,
+    var(--section-surface-strong),
+    var(--section-surface)
+  );
+  --icon-surface: var(--nav-link-active);
+  --divider: var(--border);
+  --story-surface: linear-gradient(
+    180deg,
+    var(--section-surface-strong),
+    var(--section-surface)
+  );
+  --quote-surface: rgba(255, 255, 255, 0.46);
+  --cta-background: linear-gradient(135deg, var(--primary), var(--secondary));
+  --button-secondary-text: var(--text);
+  --button-contrast-background: rgba(255, 255, 255, 0.18);
+  --button-contrast-border: rgba(255, 255, 255, 0.32);
+  --button-contrast-hover: rgba(255, 255, 255, 0.28);
+  --button-contrast-border-hover: rgba(255, 255, 255, 0.45);
+  --radius-card: 1.5rem;
+  --radius-panel: 2rem;
+  --radius-control: 999px;
+  --space-page-mobile: 1.5rem;
+  --space-page-tablet: 2rem;
+  --space-page-desktop: 2.5rem;
+  --space-card: 1.35rem;
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.25s ease;
+  --text-hero: 3.25rem;
+  --text-section: 2rem;
+  --text-cta: 2rem;
+  --text-subtitle: 1rem;
+}

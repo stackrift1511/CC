@@ -1,0 +1,29 @@
+.page {
+  display: grid;
+  gap: var(--space-page-mobile);
+}
+
+.cardsSection {
+  padding-top: 0.25rem;
+}
+
+.cardsGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .page {
+    gap: var(--space-page-tablet);
+  }
+}
+
+@media (min-width: 64rem) {
+  .page {
+    gap: var(--space-page-desktop);
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

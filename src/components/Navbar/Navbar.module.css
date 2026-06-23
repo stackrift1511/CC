@@ -1,0 +1,259 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  background: var(--nav-background);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition:
+    background-color 0.25s ease,
+    backdrop-filter 0.25s ease,
+    -webkit-backdrop-filter 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.navbarScrolled {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: var(--shadow-soft);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.brandCrunch {
+  color: var(--primary);
+}
+
+.brandChaos {
+  color: var(--secondary);
+}
+
+.inner {
+  width: min(100%, var(--content-max-width));
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.link,
+.mobileLink {
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.link {
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.link:hover {
+  color: var(--text);
+  background: var(--nav-link-hover);
+}
+
+.linkActive {
+  color: var(--primary);
+  background: var(--nav-link-active);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.desktopToggle {
+  display: none;
+}
+
+.menuButton {
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--button-secondary-background);
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.menuButton:hover {
+  background: var(--button-secondary-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.menuButton:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.menuLine {
+  width: 1.1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.overlay,
+.overlayVisible {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  background: var(--overlay);
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.overlayVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobilePanel,
+.mobilePanelOpen {
+  position: fixed;
+  top: calc(var(--navbar-height) + 0.75rem);
+  right: 1rem;
+  width: min(22rem, calc(100vw - 2rem));
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-strong);
+  z-index: 45;
+  transform-origin: top right;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.mobilePanel {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-0.5rem) scale(0.98);
+}
+
+.mobilePanelOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.mobileTitle {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.mobileLink {
+  padding: 0.9rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  color: var(--text);
+  background: transparent;
+  font-weight: 700;
+}
+
+.mobileLink:hover {
+  background: var(--nav-link-hover);
+  border-color: var(--border);
+}
+
+.mobileLinkActive {
+  color: var(--primary);
+  background: var(--nav-link-active);
+  border-color: var(--border-strong);
+}
+
+@media (min-width: 48rem) {
+  .inner {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .inner {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 50rem) {
+  .desktopNav {
+    display: inline-flex;
+  }
+
+  .desktopToggle {
+    display: block;
+  }
+
+  .menuButton,
+  .mobilePanel,
+  .mobilePanelOpen,
+  .overlay,
+  .overlayVisible {
+    display: none;
+  }
+}

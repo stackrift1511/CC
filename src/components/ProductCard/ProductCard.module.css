@@ -1,0 +1,133 @@
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: var(--space-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--product-surface);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform var(--transition-smooth),
+    border-color var(--transition-smooth),
+    background var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  background:
+    linear-gradient(180deg, var(--product-surface-hover), var(--section-surface));
+  box-shadow: var(--shadow-strong);
+}
+
+.visual {
+  aspect-ratio: 4 / 3;
+  min-height: 11rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius-card) - 0.25rem);
+  background:
+    radial-gradient(circle at 50% 15%, var(--hero-glow-secondary), transparent 38%),
+    var(--section-surface);
+  overflow: hidden;
+}
+
+.packet {
+  width: min(72%, 11rem);
+  height: auto;
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.22));
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.personality {
+  margin: 0.5rem 0 0;
+  color: var(--text);
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--nav-link-active);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.description {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.section {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.label {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.15rem;
+  font-size: 1.2rem;
+}
+
+.star {
+  color: var(--rating-inactive);
+}
+
+.starActive {
+  color: var(--rating-active);
+}
+
+.meta {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding-top: 0.35rem;
+}
+
+.value {
+  margin: 0.35rem 0 0;
+  color: var(--text);
+  font-weight: 800;
+}
