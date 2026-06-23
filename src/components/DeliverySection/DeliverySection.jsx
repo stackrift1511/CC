@@ -6,6 +6,7 @@ import {
   useMotionPreference,
 } from "../motion";
 import deliveryBox from "../../assets/illustrations/delivery-box.svg";
+import GlowCard from "../react-bits/GlowCard";
 import styles from "./DeliverySection.module.css";
 
 const platforms = [
@@ -24,7 +25,7 @@ function DeliverySection() {
     <MotionSection className={styles.section} {...useFadeUp()}>
       <div className={styles.header}>
         <p className={styles.eyebrow}>Fast Track</p>
-        <h2 className={styles.title}>Delivered In Minutes {"\u26A1"}</h2>
+        <h2 className={styles.title}>Delivered In Minutes</h2>
         <p className={styles.subtitle}>
           Snack emergencies happen. We&apos;ve planned accordingly.
         </p>
@@ -34,12 +35,16 @@ function DeliverySection() {
         {platforms.map((platform, index) => (
           <MotionArticle
             key={platform.name}
-            className={styles.card}
+            className={styles.cardWrap}
             {...getFadeUp(prefersReducedMotion, 20, 0.45, index * 0.05)}
           >
-            <img className={styles.cardArt} src={deliveryBox} alt="" loading="lazy" />
-            <h3 className={styles.cardTitle}>{platform.name}</h3>
-            <p className={styles.cardText}>{platform.text}</p>
+            <GlowCard className={styles.glowCard}>
+              <article className={styles.card}>
+                <img className={styles.cardArt} src={deliveryBox} alt="" loading="lazy" />
+                <h3 className={styles.cardTitle}>{platform.name}</h3>
+                <p className={styles.cardText}>{platform.text}</p>
+              </article>
+            </GlowCard>
           </MotionArticle>
         ))}
       </div>

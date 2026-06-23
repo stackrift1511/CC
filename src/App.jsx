@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
+import AppBackground from "./layout/AppBackground";
+import SmoothScroll from "./layout/SmoothScroll";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Nutrition from "./pages/Nutrition";
@@ -16,16 +18,15 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <>
+    <SmoothScroll>
+      <AppBackground />
       <AnimatePresence mode="wait">
-        {isLoading && (
+        {isLoading ? (
           <motion.div
             key="loader"
             initial={{ opacity: 1 }}
@@ -35,10 +36,10 @@ function App() {
           >
             <LoadingScreen />
           </motion.div>
-        )}
+        ) : null}
       </AnimatePresence>
 
-      <div className={styles.appShell}>
+      <div className={styles.shell}>
         <Navbar />
         <main className={styles.main}>
           <div className={styles.content}>
@@ -54,7 +55,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </>
+    </SmoothScroll>
   );
 }
 

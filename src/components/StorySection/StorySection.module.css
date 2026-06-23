@@ -2,12 +2,14 @@
   padding-top: 0.25rem;
 }
 
+.glowCard {
+  display: block;
+}
+
 .card {
   padding: var(--space-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-panel);
-  background: var(--story-surface);
-  box-shadow: var(--shadow-soft);
+  background: var(--card);
+  border-radius: inherit;
 }
 
 .eyebrow {

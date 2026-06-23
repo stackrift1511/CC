@@ -23,6 +23,9 @@ export function ThemeProvider({ children }) {
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     window.localStorage.setItem(STORAGE_KEY, theme);
+
+    const themeColor = theme === "light" ? "#ebe3d6" : "#0c1524";
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", themeColor);
   }, [theme]);
 
   const toggleTheme = () => {

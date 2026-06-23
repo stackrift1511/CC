@@ -21,15 +21,16 @@ body {
   background-color: var(--background);
   color: var(--text);
   font-family: var(--font-body);
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 1.6;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+    background-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 button,
@@ -54,17 +55,26 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
-  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+
+h1,
+h2 {
+  line-height: var(--leading-display);
 }
 
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-display);
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 img,
@@ -97,6 +107,23 @@ button:focus-visible,
     --text-cta: 3.1rem;
     --text-subtitle: 1.15rem;
   }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {

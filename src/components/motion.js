@@ -1,25 +1,28 @@
 import { motion, useReducedMotion } from "framer-motion";
 
+export const easePremium = [0.22, 1, 0.36, 1];
+
 export const viewportOnce = {
   once: true,
   amount: 0.2,
 };
 
-export function useFadeUp(distance = 20, duration = 0.6, delay = 0) {
+export function useFadeUp(distance = 24, duration = 0.65, delay = 0) {
   const prefersReducedMotion = useReducedMotion();
-
   return getFadeUp(prefersReducedMotion, distance, duration, delay);
 }
 
-export function usePageFade(duration = 0.55) {
+export function usePageFade(duration = 0.6) {
   const prefersReducedMotion = useReducedMotion();
 
   return {
-    initial: prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: 16 },
-    animate: { opacity: 1, y: 0 },
+    initial: prefersReducedMotion
+      ? { opacity: 1 }
+      : { opacity: 0, y: 20, filter: "blur(6px)" },
+    animate: { opacity: 1, y: 0, filter: "blur(0px)" },
     transition: prefersReducedMotion
       ? { duration: 0 }
-      : { duration, ease: [0.22, 1, 0.36, 1] },
+      : { duration, ease: easePremium },
   };
 }
 
@@ -27,9 +30,9 @@ export function useButtonMotion() {
   const prefersReducedMotion = useReducedMotion();
 
   return {
-    whileHover: prefersReducedMotion ? {} : { scale: 1.03 },
-    whileTap: prefersReducedMotion ? {} : { scale: 0.97 },
-    transition: { duration: 0.2, ease: [0.22, 1, 0.36, 1] },
+    whileHover: prefersReducedMotion ? {} : { y: -2 },
+    whileTap: prefersReducedMotion ? {} : { scale: 0.98 },
+    transition: { duration: 0.2, ease: easePremium },
   };
 }
 
@@ -39,17 +42,40 @@ export function useMotionPreference() {
 
 export function getFadeUp(
   prefersReducedMotion,
-  distance = 20,
-  duration = 0.6,
+  distance = 24,
+  duration = 0.65,
   delay = 0
 ) {
   return {
-    initial: prefersReducedMotion ? { opacity: 1 } : { opacity: 0, y: distance },
-    whileInView: { opacity: 1, y: 0 },
+    initial: prefersReducedMotion
+      ? { opacity: 1 }
+      : { opacity: 0, y: distance, filter: "blur(6px)" },
+    whileInView: { opacity: 1, y: 0, filter: "blur(0px)" },
     viewport: viewportOnce,
     transition: prefersReducedMotion
       ? { duration: 0 }
-      : { duration, delay, ease: [0.22, 1, 0.36, 1] },
+      : { duration, delay, ease: easePremium },
+  };
+}
+
+export function getStaggerChildren(stagger = 0.06, delayChildren = 0.05) {
+  return {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: stagger, delayChildren },
+    },
+  };
+}
+
+export function getStaggerItem(distance = 20) {
+  return {
+    hidden: { opacity: 0, y: distance, filter: "blur(6px)" },
+    show: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.55, ease: easePremium },
+    },
   };
 }
 

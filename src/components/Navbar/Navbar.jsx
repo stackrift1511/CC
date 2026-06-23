@@ -21,39 +21,28 @@ function Navbar() {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (!isMenuOpen) {
-      return undefined;
-    }
+    if (!isMenuOpen) return undefined;
 
     const handleEscape = (event) => {
-      if (event.key === "Escape") {
-        setIsMenuOpen(false);
-      }
+      if (event.key === "Escape") setIsMenuOpen(false);
     };
 
     window.addEventListener("keydown", handleEscape);
-
-    return () => {
-      window.removeEventListener("keydown", handleEscape);
-    };
+    return () => window.removeEventListener("keydown", handleEscape);
   }, [isMenuOpen]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 12);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 12);
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      <header className={isScrolled ? `${styles.navbar} ${styles.navbarScrolled}` : styles.navbar}>
+      <header
+        className={isScrolled ? `${styles.navbar} ${styles.navbarScrolled}` : styles.navbar}
+      >
         <div className={styles.inner}>
           <NavLink to="/" className={styles.brand} aria-label="Crunch Chaos home">
             <span className={styles.brandCrunch}>CRUNCH</span>

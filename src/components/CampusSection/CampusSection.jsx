@@ -6,19 +6,14 @@ import {
   useMotionPreference,
 } from "../motion";
 import mapMarker from "../../assets/illustrations/map-marker.svg";
+import GlowCard from "../react-bits/GlowCard";
 import styles from "./CampusSection.module.css";
 
 const campuses = [
   { city: "Delhi NCR", text: "DU to Amity." },
   { city: "Mumbai", text: "Fueling presentations and attendance shortages." },
-  {
-    city: "Bangalore",
-    text: "Engineering students doing engineering student things.",
-  },
-  {
-    city: "Pune & Hyderabad",
-    text: "Questionable sleep schedules. Excellent snack choices.",
-  },
+  { city: "Bangalore", text: "Engineering students doing engineering student things." },
+  { city: "Pune & Hyderabad", text: "Questionable sleep schedules. Excellent snack choices." },
 ];
 
 function CampusSection() {
@@ -38,12 +33,16 @@ function CampusSection() {
         {campuses.map((campus, index) => (
           <MotionArticle
             key={campus.city}
-            className={styles.card}
+            className={styles.cardWrap}
             {...getFadeUp(prefersReducedMotion, 20, 0.45, index * 0.05)}
           >
-            <img className={styles.cardArt} src={mapMarker} alt="" loading="lazy" />
-            <h3 className={styles.cardTitle}>{campus.city}</h3>
-            <p className={styles.cardText}>{campus.text}</p>
+            <GlowCard className={styles.glowCard}>
+              <article className={styles.card}>
+                <img className={styles.cardArt} src={mapMarker} alt="" loading="lazy" />
+                <h3 className={styles.cardTitle}>{campus.city}</h3>
+                <p className={styles.cardText}>{campus.text}</p>
+              </article>
+            </GlowCard>
           </MotionArticle>
         ))}
       </div>

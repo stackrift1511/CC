@@ -27,25 +27,21 @@
   gap: 1rem;
 }
 
+.cardWrap {
+  min-width: 0;
+}
+
+.glowCard {
+  height: 100%;
+}
+
 .card {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: var(--space-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  background: var(--product-surface);
-  box-shadow: var(--shadow-soft);
-  transition:
-    transform var(--transition-smooth),
-    border-color var(--transition-smooth),
-    box-shadow var(--transition-smooth);
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-strong);
+  background: var(--card);
+  border-radius: inherit;
 }
 
 .icon {

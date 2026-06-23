@@ -1,0 +1,211 @@
+.section {
+  --promo-bg: #ddd0bc;
+  position: relative;
+  margin: 0 calc(var(--space-page-mobile) * -1);
+  padding: 4.5rem 1.5rem;
+  background: var(--promo-bg);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .section {
+  --promo-bg: #1a2438;
+}
+
+.decorBranch {
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  width: min(40vw, 16rem);
+  height: min(40vw, 16rem);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 1px solid rgba(42, 74, 122, 0.15);
+  opacity: 0.35;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 107, 43, 0.12), transparent 55%),
+    repeating-radial-gradient(circle at 50% 50%, transparent 0 8px, rgba(42, 74, 122, 0.06) 8px 9px);
+}
+
+.decorBranch::before,
+.decorBranch::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(42, 74, 122, 0.12);
+  border-radius: 50%;
+}
+
+.decorBranch::before {
+  inset: 18%;
+}
+
+.decorBranch::after {
+  inset: 36%;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--content-max-width));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shipping {
+  margin: 0 0 2rem;
+  font-family: var(--font-display);
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.badge {
+  display: grid;
+  place-items: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(26, 41, 66, 0.12);
+  background: rgba(255, 255, 255, 0.35);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+[data-theme="dark"] .badge {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(244, 241, 234, 0.12);
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat {
+  padding: 1.25rem;
+  border-top: 1px solid rgba(26, 41, 66, 0.12);
+}
+
+[data-theme="dark"] .stat {
+  border-color: rgba(244, 241, 234, 0.1);
+}
+
+.statValue {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.1rem;
+  font-family: var(--font-display);
+}
+
+.statPrefix,
+.statSuffix {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.statLabel {
+  margin: 0.5rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.offerBlock {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.offerTitle {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.signup {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  padding: 0.35rem;
+  border-radius: var(--radius-control);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(26, 41, 66, 0.08);
+}
+
+[data-theme="dark"] .signup {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.input {
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.signupBtn {
+  padding: 0.85rem 1.35rem;
+  border: none;
+  border-radius: var(--radius-control);
+  background: var(--primary);
+  color: var(--button-primary-text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.signupBtn:hover {
+  background: var(--primary-hover);
+}
+
+@media (min-width: 48rem) {
+  .section {
+    margin-inline: calc(var(--space-page-tablet) * -1);
+    padding-inline: 2rem;
+  }
+
+  .statsRow {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .section {
+    margin-inline: calc(var(--space-page-desktop) * -1);
+  }
+}

@@ -21,36 +21,23 @@ function Hero() {
         animate="show"
         variants={{
           hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.08,
-              delayChildren: 0.05,
-            },
-          },
+          show: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
         }}
       >
         <motion.p
           className={styles.badge}
           variants={{
             hidden: { opacity: 0, y: 16 },
-            show: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
-            },
+            show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
           }}
         >
-          {"\uD83D\uDD25"} India&apos;s Boldest College Snack
+          India&apos;s Boldest College Snack
         </motion.p>
         <motion.h1
           className={styles.title}
           variants={{
             hidden: { opacity: 0, y: 18 },
-            show: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-            },
+            show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
           }}
         >
           <span className={styles.crunch}>CRUNCH</span>
@@ -60,11 +47,7 @@ function Hero() {
           className={styles.tagline}
           variants={{
             hidden: { opacity: 0, y: 14 },
-            show: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
-            },
+            show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
           }}
         >
           Lose Control. Gain Crunch.
@@ -73,11 +56,7 @@ function Hero() {
           className={styles.subheading}
           variants={{
             hidden: { opacity: 0, y: 14 },
-            show: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
-            },
+            show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
           }}
         >
           For nights you&apos;ll never forget. From midnight Maggi sessions to
@@ -89,11 +68,7 @@ function Hero() {
           className={styles.actions}
           variants={{
             hidden: { opacity: 0, y: 12 },
-            show: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
-            },
+            show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
           }}
         >
           <motion.div {...buttonMotion}>

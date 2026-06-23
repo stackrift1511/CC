@@ -8,38 +8,50 @@
   gap: 1rem;
 }
 
+.cardWrap {
+  min-width: 0;
+}
+
+.glowCard {
+  height: 100%;
+}
+
 .card {
   padding: var(--space-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  background: var(--section-surface);
-  box-shadow: var(--shadow-soft);
-  transition:
-    transform var(--transition-smooth),
-    border-color var(--transition-smooth),
-    background-color var(--transition-smooth),
-    box-shadow var(--transition-smooth);
+  background: var(--card);
+  border-radius: inherit;
+  text-align: center;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: var(--border-strong);
-  background: var(--section-surface-strong);
-  box-shadow: var(--shadow-strong);
-}
-
-.value {
-  margin: 0;
-  color: var(--text);
+.valueRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  min-height: 2.5rem;
   font-family: var(--font-display);
+}
+
+.prefix,
+.suffix {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.valueFallback {
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 600;
+  color: var(--primary);
 }
 
 .label {
   margin: 0.45rem 0 0;
   color: var(--text-muted);
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 @media (min-width: 48rem) {
@@ -49,9 +61,5 @@
 
   .grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .value {
-    font-size: 2.4rem;
   }
 }

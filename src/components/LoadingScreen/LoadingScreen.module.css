@@ -13,34 +13,34 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 2rem;
 }
 
 .logoWrap {
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
-  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
   border: 1px solid var(--border);
-  background:
-    radial-gradient(circle at 50% 20%, var(--hero-glow-secondary), transparent 42%),
-    var(--section-surface-strong);
-  box-shadow: var(--shadow-soft);
+  background: var(--section-surface-strong);
 }
 
 .logo {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .brand {
   margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
+  display: grid;
+  gap: 0.1em;
+  font-family: var(--font-brand);
+  font-size: 1.5rem;
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-brand);
 }
 
 .crunch {
@@ -51,11 +51,17 @@
   color: var(--secondary);
 }
 
-.tagline {
-  margin: 0.85rem 0 0;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.03em;
+.progressTrack {
+  width: 8rem;
+  height: 2px;
+  margin-top: 1.75rem;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  transform-origin: left;
 }

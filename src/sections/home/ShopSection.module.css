@@ -1,0 +1,108 @@
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.subtitle {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.glowCard {
+  height: 100%;
+}
+
+.card {
+  padding: 1.5rem;
+  text-align: center;
+  background: var(--card);
+  border-radius: inherit;
+}
+
+.visual {
+  display: grid;
+  place-items: center;
+  min-height: 11rem;
+  margin-bottom: 1rem;
+}
+
+.visual img {
+  width: min(70%, 9rem);
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.18));
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glowCard:hover .visual img {
+  transform: scale(1.06) translateY(-4px);
+}
+
+.size {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.name {
+  margin: 0.35rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.price {
+  margin: 0.25rem 0 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.cartBtn {
+  width: 100%;
+  min-height: 2.85rem;
+  border: none;
+  border-radius: var(--radius-control);
+  background: var(--primary);
+  color: var(--button-primary-text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.cartBtn:hover {
+  transform: translateY(-2px);
+  background: var(--primary-hover);
+}
+
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

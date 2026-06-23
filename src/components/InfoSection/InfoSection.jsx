@@ -1,3 +1,4 @@
+import GlowCard from "../react-bits/GlowCard";
 import styles from "./InfoSection.module.css";
 
 const infoItems = [
@@ -12,20 +13,22 @@ const infoItems = [
 function InfoSection() {
   return (
     <section className={styles.section}>
-      <div className={styles.card}>
-        <p className={styles.eyebrow}>Compliance Corner</p>
-        <h2 className={styles.title}>The Boring But Important Stuff</h2>
-        <p className={styles.subtitle}>Because adults insist.</p>
+      <GlowCard className={styles.glowCard}>
+        <div className={styles.card}>
+          <p className={styles.eyebrow}>Compliance Corner</p>
+          <h2 className={styles.title}>The Boring But Important Stuff</h2>
+          <p className={styles.subtitle}>Because adults insist.</p>
 
-        <div className={styles.grid}>
-          {infoItems.map(([label, value]) => (
-            <div key={label} className={styles.item}>
-              <p className={styles.label}>{label}</p>
-              <p className={styles.value}>{value}</p>
-            </div>
-          ))}
+          <div className={styles.grid}>
+            {infoItems.map(([label, value]) => (
+              <div key={label} className={styles.item}>
+                <p className={styles.label}>{label}</p>
+                <p className={styles.value}>{value}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </GlowCard>
     </section>
   );
 }

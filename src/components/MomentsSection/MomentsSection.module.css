@@ -11,7 +11,7 @@
   margin: 0 0 0.65rem;
   color: var(--primary);
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -34,24 +34,18 @@
   gap: 1rem;
 }
 
-.card {
-  padding: var(--space-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  background:
-    linear-gradient(180deg, var(--section-surface-strong), var(--section-surface));
-  box-shadow: var(--shadow-soft);
-  transition:
-    transform var(--transition-smooth),
-    border-color var(--transition-smooth),
-    background-color var(--transition-smooth),
-    box-shadow var(--transition-smooth);
+.cardWrap {
+  min-width: 0;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-strong);
+.glowCard {
+  height: 100%;
+}
+
+.card {
+  padding: var(--space-card);
+  background: var(--card);
+  border-radius: inherit;
 }
 
 .icon {
@@ -63,7 +57,7 @@
   border-radius: 1rem;
   background: var(--nav-link-active);
   color: var(--primary);
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .cardTitle {

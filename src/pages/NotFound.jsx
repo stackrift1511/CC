@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import GlowCard from "../components/react-bits/GlowCard";
 import { useButtonMotion, usePageFade } from "../components/motion";
 import styles from "./NotFound.module.css";
 
@@ -21,23 +22,23 @@ function NotFound() {
 
   return (
     <motion.section className={styles.hero} {...heroMotion}>
-      <div className={styles.glowPrimary} aria-hidden="true" />
-      <div className={styles.glowSecondary} aria-hidden="true" />
-      <div className={styles.content}>
-        <p className={styles.badge}>{"\u26A0"} Error 404</p>
-        <h1 className={styles.title}>Looks Like Someone Ate This Page.</h1>
-        <p className={styles.subtitle}>
-          Don&apos;t worry. Even Chacha gets lost sometimes.
-        </p>
+      <GlowCard className={styles.glowCard} borderRadius={24}>
+        <div className={styles.content}>
+          <p className={styles.badge}>Error 404</p>
+          <h1 className={styles.title}>Looks Like Someone Ate This Page.</h1>
+          <p className={styles.subtitle}>
+            Don&apos;t worry. Even Chacha gets lost sometimes.
+          </p>
 
-        <div className={styles.actions}>
-          <motion.div {...buttonMotion}>
-            <Link to="/" className={styles.primaryButton}>
-              Take Me Home
-            </Link>
-          </motion.div>
+          <div className={styles.actions}>
+            <motion.div {...buttonMotion}>
+              <Link to="/" className={styles.primaryButton}>
+                Take Me Home
+              </Link>
+            </motion.div>
+          </div>
         </div>
-      </div>
+      </GlowCard>
     </motion.section>
   );
 }

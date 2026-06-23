@@ -1,0 +1,100 @@
+.wrap {
+  display: inline-flex;
+}
+
+.wrapFull {
+  width: 100%;
+}
+
+.wrapFull .button {
+  width: 100%;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-control);
+  border: 1px solid transparent;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-smooth),
+    border-color var(--transition-smooth),
+    color var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+}
+
+.shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 60%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.button:hover .shine {
+  transform: translateX(120%);
+}
+
+.primary {
+  background: var(--button-primary-background);
+  color: var(--button-primary-text);
+  box-shadow: var(--shadow-glow);
+}
+
+.primary:hover {
+  background: var(--button-primary-hover);
+  box-shadow: var(--shadow-soft);
+}
+
+.secondary {
+  background: var(--button-secondary-background);
+  color: var(--button-secondary-text);
+  border-color: var(--border);
+}
+
+.secondary:hover {
+  background: var(--button-secondary-hover);
+  border-color: var(--border-strong);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.ghost:hover {
+  background: var(--button-secondary-hover);
+  border-color: var(--border-strong);
+}
+
+.contrast {
+  background: var(--button-contrast-background);
+  color: inherit;
+  border-color: var(--button-contrast-border);
+}
+
+.contrast:hover {
+  background: var(--button-contrast-hover);
+  border-color: var(--button-contrast-border-hover);
+}

@@ -1,0 +1,38 @@
+.header {
+  max-width: 42rem;
+  margin-bottom: 2.5rem;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.kicker {
+  margin: 0 0 0.75rem;
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-section);
+  line-height: var(--leading-display);
+  color: var(--text);
+}
+
+.subtitle {
+  margin: 1rem 0 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 36rem;
+}
+
+.center .subtitle {
+  margin-inline: auto;
+}

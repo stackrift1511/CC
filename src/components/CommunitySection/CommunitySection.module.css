@@ -34,24 +34,18 @@
   gap: 1rem;
 }
 
-.card {
-  padding: var(--space-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-card);
-  background: var(--product-surface);
-  box-shadow: var(--shadow-soft);
-  transition:
-    transform var(--transition-smooth),
-    border-color var(--transition-smooth),
-    background-color var(--transition-smooth),
-    background var(--transition-smooth),
-    box-shadow var(--transition-smooth);
+.cardWrap {
+  min-width: 0;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-strong);
+.glowCard {
+  height: 100%;
+}
+
+.card {
+  padding: var(--space-card);
+  background: var(--card);
+  border-radius: inherit;
 }
 
 .cardTitle {

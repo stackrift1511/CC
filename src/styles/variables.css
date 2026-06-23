@@ -1,44 +1,46 @@
 :root {
-  --background: #08111f;
-  --surface: #0f1b2f;
-  --card: #13213a;
-  --text: #f7f4ec;
-  --text-muted: rgba(247, 244, 236, 0.72);
-  --primary: #ff7a1a;
-  --primary-hover: #ff9142;
-  --secondary: #f4c64f;
-  --secondary-hover: #f7d572;
-  --accent: #6d8a5b;
-  --border: rgba(255, 255, 255, 0.12);
-  --border-strong: rgba(255, 255, 255, 0.2);
-  --shadow-soft: 0 16px 40px rgba(0, 0, 0, 0.22);
-  --shadow-strong: 0 24px 60px rgba(0, 0, 0, 0.32);
+  --background: #0c1524;
+  --surface: #131f33;
+  --card: #1a2942;
+  --text: #f4f1ea;
+  --text-muted: rgba(244, 241, 234, 0.68);
+  --primary: #ff6b2b;
+  --primary-hover: #ff8349;
+  --secondary: #2a4a7a;
+  --secondary-hover: #356099;
+  --accent: #4a6fa5;
+  --border: rgba(244, 241, 234, 0.1);
+  --border-strong: rgba(244, 241, 234, 0.18);
+  --shadow-soft: 0 12px 32px rgba(0, 0, 0, 0.18);
+  --shadow-strong: 0 20px 48px rgba(0, 0, 0, 0.28);
+  --shadow-glow: 0 0 0 1px rgba(255, 107, 43, 0.08);
   --button-primary-background: var(--primary);
-  --button-primary-text: #0d1420;
+  --button-primary-text: #0c1524;
   --button-primary-hover: var(--primary-hover);
-  --button-secondary-background: rgba(255, 255, 255, 0.04);
-  --button-secondary-hover: rgba(255, 255, 255, 0.08);
-  --focus-ring: rgba(244, 198, 79, 0.4);
-  --selection-background: rgba(255, 122, 26, 0.28);
+  --button-secondary-background: rgba(244, 241, 234, 0.04);
+  --button-secondary-hover: rgba(244, 241, 234, 0.08);
+  --focus-ring: rgba(74, 111, 165, 0.45);
+  --selection-background: rgba(255, 107, 43, 0.24);
   --selection-text: var(--text);
-  --nav-background: rgba(8, 17, 31, 0.78);
-  --nav-link-hover: rgba(255, 255, 255, 0.06);
-  --nav-link-active: rgba(255, 122, 26, 0.14);
-  --footer-background: rgba(255, 255, 255, 0.02);
-  --overlay: rgba(6, 10, 18, 0.52);
-  --hero-glow-primary: rgba(255, 122, 26, 0.28);
-  --hero-glow-secondary: rgba(244, 198, 79, 0.18);
-  --hero-grid: rgba(255, 255, 255, 0.04);
-  --section-surface: rgba(255, 255, 255, 0.03);
-  --section-surface-strong: rgba(255, 255, 255, 0.05);
+  --nav-background: rgba(12, 21, 36, 0.82);
+  --nav-link-hover: rgba(244, 241, 234, 0.06);
+  --nav-link-active: rgba(255, 107, 43, 0.12);
+  --footer-background: rgba(244, 241, 234, 0.02);
+  --overlay: rgba(6, 10, 18, 0.55);
+  --hero-glow-primary: rgba(255, 107, 43, 0.16);
+  --hero-glow-secondary: rgba(42, 74, 122, 0.2);
+  --hero-grid: rgba(244, 241, 234, 0.035);
+  --section-surface: rgba(244, 241, 234, 0.025);
+  --section-surface-strong: rgba(244, 241, 234, 0.045);
+  --section-band: rgba(42, 74, 122, 0.08);
   --product-surface: linear-gradient(
     180deg,
     var(--section-surface-strong),
     var(--section-surface)
   );
-  --product-surface-hover: rgba(255, 255, 255, 0.07);
-  --rating-active: var(--secondary);
-  --rating-inactive: rgba(255, 255, 255, 0.18);
+  --product-surface-hover: rgba(244, 241, 234, 0.06);
+  --rating-active: var(--primary);
+  --rating-inactive: rgba(244, 241, 234, 0.16);
   --eyebrow: var(--primary);
   --info-surface: linear-gradient(
     180deg,
@@ -52,29 +54,40 @@
     var(--section-surface-strong),
     var(--section-surface)
   );
-  --quote-surface: rgba(255, 255, 255, 0.04);
-  --cta-background: linear-gradient(135deg, var(--primary), var(--secondary));
+  --quote-surface: rgba(244, 241, 234, 0.04);
+  --cta-background: linear-gradient(
+    135deg,
+    var(--secondary) 0%,
+    #1a2942 50%,
+    var(--primary) 100%
+  );
+  --cta-text: #f4f1ea;
   --button-secondary-text: var(--text);
-  --button-contrast-background: rgba(255, 255, 255, 0.22);
-  --button-contrast-border: rgba(255, 255, 255, 0.3);
-  --button-contrast-hover: rgba(255, 255, 255, 0.3);
-  --button-contrast-border-hover: rgba(255, 255, 255, 0.4);
-  --radius-card: 1.5rem;
-  --radius-panel: 2rem;
+  --button-contrast-background: rgba(244, 241, 234, 0.14);
+  --button-contrast-border: rgba(244, 241, 234, 0.22);
+  --button-contrast-hover: rgba(244, 241, 234, 0.22);
+  --button-contrast-border-hover: rgba(244, 241, 234, 0.32);
+  --radius-card: 1.25rem;
+  --radius-panel: 1.75rem;
   --radius-control: 999px;
   --space-page-mobile: 1.5rem;
   --space-page-tablet: 2rem;
   --space-page-desktop: 2.5rem;
-  --space-card: 1.35rem;
-  --transition-fast: 0.2s ease;
-  --transition-smooth: 0.25s ease;
+  --space-card: 1.5rem;
+  --space-section: 5rem;
+  --transition-fast: 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   --text-hero: 3.25rem;
   --text-section: 2rem;
   --text-cta: 2rem;
   --text-subtitle: 1rem;
-  --content-max-width: 80rem;
-  --navbar-height: 5rem;
-  --font-body:
-    "Avenir Next", "Segoe UI", "Nunito Sans", "Helvetica Neue", sans-serif;
-  --font-display: "Trebuchet MS", "Avenir Next", "Segoe UI", sans-serif;
+  --content-max-width: 76rem;
+  --navbar-height: 4.75rem;
+  --font-body: "Satoshi", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Clash Display", "Satoshi", system-ui, sans-serif;
+  --font-brand: "Comico", "Clash Display", cursive;
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.12em;
+  --tracking-brand: 0.02em;
+  --leading-display: 0.92;
 }

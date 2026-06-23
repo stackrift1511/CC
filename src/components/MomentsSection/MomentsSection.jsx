@@ -5,6 +5,7 @@ import {
   useFadeUp,
   useMotionPreference,
 } from "../motion";
+import GlowCard from "../react-bits/GlowCard";
 import styles from "./MomentsSection.module.css";
 
 const moments = [
@@ -55,12 +56,16 @@ function MomentsSection() {
         {moments.map((moment, index) => (
           <MotionArticle
             key={moment.title}
-            className={styles.card}
+            className={styles.cardWrap}
             {...getFadeUp(prefersReducedMotion, 20, 0.45, index * 0.05)}
           >
-            <div className={styles.icon}>{moment.marker}</div>
-            <h3 className={styles.cardTitle}>{moment.title}</h3>
-            <p className={styles.cardText}>{moment.description}</p>
+            <GlowCard className={styles.glowCard}>
+              <article className={styles.card}>
+                <div className={styles.icon}>{moment.marker}</div>
+                <h3 className={styles.cardTitle}>{moment.title}</h3>
+                <p className={styles.cardText}>{moment.description}</p>
+              </article>
+            </GlowCard>
           </MotionArticle>
         ))}
       </div>
